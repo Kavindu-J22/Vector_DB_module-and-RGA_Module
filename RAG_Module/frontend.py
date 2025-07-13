@@ -211,7 +211,7 @@ def render_sidebar():
             st.session_state.session_id = st.session_state.rag_system.dialog_manager.create_session()
             st.rerun()
 
-def render_response_card(response: Dict[str, Any], index: int):
+def render_response_card(response: Dict[str, Any], index: int, is_history: bool = False):
     """Render a single response card"""
     
     # Determine card class based on style and recommendation
@@ -256,31 +256,36 @@ def render_response_card(response: Dict[str, Any], index: int):
                 </div>
                 """, unsafe_allow_html=True)
     
-    # Feedback buttons
-    col1, col2, col3 = st.columns([1, 1, 2])
-    
-    with col1:
-        if st.button(f"👍 Helpful", key=f"helpful_{index}"):
-            st.session_state.rag_system.update_response_feedback(
-                st.session_state.session_id, 
-                len(st.session_state.chat_history), 
-                index, 
-                "helpful"
-            )
-            st.success("Thank you for your feedback!")
-    
-    with col2:
-        if st.button(f"👎 Not Helpful", key=f"not_helpful_{index}"):
-            st.session_state.rag_system.update_response_feedback(
-                st.session_state.session_id, 
-                len(st.session_state.chat_history), 
-                index, 
-                "not_helpful"
-            )
-            st.info("Feedback recorded. We'll improve!")
-    
-    with col3:
-        if st.button(f"📋 Copy Response", key=f"copy_{index}"):
+    # Feedback and action buttons
+    if not is_history:
+        col1, col2, col3 = st.columns([1, 1, 2])
+
+        with col1:
+            if st.button(f"👍 Helpful", key=f"helpful_{index}"):
+                st.session_state.rag_system.update_response_feedback(
+                    st.session_state.session_id,
+                    len(st.session_state.chat_history),
+                    index,
+                    "helpful"
+                )
+                st.success("Thank you for your feedback!")
+
+        with col2:
+            if st.button(f"👎 Not Helpful", key=f"not_helpful_{index}"):
+                st.session_state.rag_system.update_response_feedback(
+                    st.session_state.session_id,
+                    len(st.session_state.chat_history),
+                    index,
+                    "not_helpful"
+                )
+                st.info("Feedback recorded. We'll improve!")
+
+        with col3:
+            if st.button(f"📋 Copy Response", key=f"copy_{index}"):
+                st.code(response['content'], language=None)
+    else:
+        st.info("💡 This is a response from your conversation history.")
+        if st.button(f"📋 Copy Response", key=f"copy_history_{index}"):
             st.code(response['content'], language=None)
 
 def render_chat_interface():
@@ -290,7 +295,14 @@ def render_chat_interface():
     st.subheader("💬 Ask Your Legal Question")
     
     # Query input
-    default_value = st.session_state.get('selected_example', '')
+    # Check if we need to set a new example
+    if 'selected_example' in st.session_state:
+        # Use the selected example and clear it
+        default_value = st.session_state.selected_example
+        del st.session_state.selected_example
+    else:
+        default_value = ""
+
     user_query = st.text_area(
         "Enter your legal question:",
         value=default_value,
@@ -298,10 +310,6 @@ def render_chat_interface():
         height=100,
         key="user_input"
     )
-
-    # Clear the selected example after using it
-    if 'selected_example' in st.session_state:
-        del st.session_state.selected_example
     
     # Advanced options
     with st.expander("🔧 Advanced Search Options"):
@@ -335,6 +343,12 @@ def render_chat_interface():
     
     # Handle example button
     if example_button:
+        st.session_state.show_examples = True
+        st.rerun()
+
+    # Show example selection if requested
+    if st.session_state.get('show_examples', False):
+        st.markdown("### 💡 Example Legal Questions")
         examples = [
             "What are the property ownership rights in Sri Lanka?",
             "How to file for divorce in Sri Lankan courts?",
@@ -342,10 +356,18 @@ def render_chat_interface():
             "Commercial contract dispute resolution process",
             "Child custody laws in Sri Lanka"
         ]
-        selected_example = st.selectbox("Choose an example:", examples, key="example_selector")
-        if st.button("Use This Example", key="use_example"):
-            st.session_state.selected_example = selected_example
-            st.rerun()
+
+        col_ex1, col_ex2 = st.columns([3, 1])
+        with col_ex1:
+            selected_example = st.selectbox("Choose an example:", examples, key="example_selector")
+        with col_ex2:
+            if st.button("Use This Example", key="use_example"):
+                st.session_state.selected_example = selected_example
+                st.session_state.show_examples = False
+                st.rerun()
+            if st.button("Cancel", key="cancel_example"):
+                st.session_state.show_examples = False
+                st.rerun()
     
     # Handle search only button
     if search_button and user_query:
@@ -392,7 +414,8 @@ def render_chat_interface():
             result = st.session_state.rag_system.process_query(
                 user_query,
                 st.session_state.session_id,
-                st.session_state.user_preferences
+                st.session_state.user_preferences,
+                filters
             )
             
             if result['success']:
@@ -440,36 +463,96 @@ def render_responses():
         # Legal disclaimer
         st.warning(rag_config.LEGAL_DISCLAIMER)
 
+    # Display selected history response
+    if hasattr(st.session_state, 'selected_history_response') and st.session_state.selected_history_response:
+        st.subheader("📜 Selected Response from History")
+        render_response_card(st.session_state.selected_history_response, -1, is_history=True)
+
+        # Clear button
+        if st.button("Clear Selected Response", key="clear_history_response"):
+            del st.session_state.selected_history_response
+            st.rerun()
+
 def render_chat_history():
-    """Render chat history"""
-    
+    """Render chat history with improved UI"""
+
     if st.session_state.chat_history:
         st.subheader("💬 Conversation History")
-        
+
         # Limit display to recent messages
         recent_history = st.session_state.chat_history[-rag_config.MAX_CHAT_HISTORY_DISPLAY:]
-        
+
         for i, message in enumerate(recent_history):
             timestamp = datetime.fromtimestamp(message['timestamp']).strftime("%H:%M:%S")
-            
+
             if message['role'] == 'user':
+                # User message with attractive styling
                 st.markdown(f"""
-                <div class="chat-message user-message">
-                    <strong>👤 You ({timestamp}):</strong><br>
-                    {message['content']}
+                <div style="
+                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                    color: white;
+                    padding: 15px;
+                    border-radius: 15px 15px 5px 15px;
+                    margin: 10px 0;
+                    margin-left: 20%;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                ">
+                    <div style="display: flex; align-items: center; margin-bottom: 8px;">
+                        <span style="font-size: 18px; margin-right: 8px;">👤</span>
+                        <strong>You</strong>
+                        <span style="margin-left: auto; font-size: 12px; opacity: 0.8;">{timestamp}</span>
+                    </div>
+                    <div style="font-size: 14px; line-height: 1.4;">
+                        {message['content']}
+                    </div>
                 </div>
                 """, unsafe_allow_html=True)
-            
+
             else:  # assistant
                 processing_time = message.get('processing_time', 0)
                 docs_count = message.get('docs_count', 0)
-                
+                responses = message.get('content', [])
+
+                # Assistant message with clickable responses
                 st.markdown(f"""
-                <div class="chat-message assistant-message">
-                    <strong>🤖 Legal Assistant ({timestamp}):</strong><br>
-                    <em>Generated {len(message['content'])} responses in {processing_time:.2f}s using {docs_count} legal documents</em>
+                <div style="
+                    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+                    color: white;
+                    padding: 15px;
+                    border-radius: 15px 15px 15px 5px;
+                    margin: 10px 0;
+                    margin-right: 20%;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                ">
+                    <div style="display: flex; align-items: center; margin-bottom: 8px;">
+                        <span style="font-size: 18px; margin-right: 8px;">🤖</span>
+                        <strong>Legal Assistant</strong>
+                        <span style="margin-left: auto; font-size: 12px; opacity: 0.8;">{timestamp}</span>
+                    </div>
+                    <div style="font-size: 12px; opacity: 0.9; margin-bottom: 10px;">
+                        Generated {len(responses)} responses in {processing_time:.2f}s using {docs_count} legal documents
+                    </div>
                 </div>
                 """, unsafe_allow_html=True)
+
+                # Show clickable response previews
+                if responses:
+                    st.markdown("**Click on a response to view it below:**")
+                    cols = st.columns(min(len(responses), 3))
+
+                    for idx, response in enumerate(responses):
+                        with cols[idx % 3]:
+                            response_preview = response.get('content', '')[:100] + "..." if len(response.get('content', '')) > 100 else response.get('content', '')
+
+                            if st.button(
+                                f"📋 {response.get('title', f'Response {idx+1}')}",
+                                key=f"history_response_{i}_{idx}",
+                                help=response_preview,
+                                use_container_width=True
+                            ):
+                                # Set the selected response to display
+                                st.session_state.selected_history_response = response
+                                st.rerun()
 
 def main():
     """Main application function"""

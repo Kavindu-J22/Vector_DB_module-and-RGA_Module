@@ -111,3 +111,69 @@
 2025-07-13 08:23:42,628 - rag_system - INFO - Successfully processed query in 0.313s
 2025-07-13 08:24:15,708 - dialog_manager - INFO - Created new session: c379565a-792b-4231-80e7-61601f71c749
 2025-07-13 08:25:06,345 - dialog_manager - INFO - Created new session: 017aaba5-9d77-4667-9993-d88d9b775120
+2025-07-13 08:27:43,505 - vector_db_connector - INFO - Retrieved 20 documents for query: hi...
+2025-07-13 08:27:43,505 - vector_db_connector - INFO - Filtered 10 results to 4 above threshold 0.5
+2025-07-13 08:27:43,505 - vector_db_connector - INFO - Re-ranked 4 results
+2025-07-13 08:27:43,505 - rag_system - INFO - Retrieved 4 relevant documents
+2025-07-13 08:27:43,505 - rag_system - INFO - Successfully processed query in 0.339s
+2025-07-13 08:28:22,926 - vector_db_connector - INFO - Retrieved 20 documents for query: hi...
+2025-07-13 08:29:32,531 - vector_db_connector - INFO - Retrieved 20 documents for query: What are the property ownership rights in Sri Lank...
+2025-07-13 08:29:32,531 - vector_db_connector - INFO - Filtered 10 results to 7 above threshold 0.5
+2025-07-13 08:29:32,531 - vector_db_connector - INFO - Re-ranked 7 results
+2025-07-13 08:29:32,541 - rag_system - INFO - Retrieved 5 relevant documents
+2025-07-13 08:29:32,541 - rag_system - INFO - Successfully processed query in 0.374s
+2025-07-13 08:35:41,050 - vector_db_connector - INFO - VectorDBConnector initialized
+2025-07-13 08:35:41,050 - response_generator - WARNING - OpenAI API key not configured. Using fallback response generation.
+2025-07-13 08:35:41,050 - dialog_manager - INFO - DialogManager initialized
+2025-07-13 08:35:41,050 - rag_system - INFO - RAG System initialized successfully
+2025-07-13 08:35:41,050 - dialog_manager - INFO - Created new session: 9b0abaad-3103-4199-a9b2-d682ac191595
+2025-07-13 08:36:23,035 - dialog_manager - INFO - Created new session: 323c21e3-ce0f-4d6e-a1d7-de52c28618fd
+2025-07-13 08:37:26,509 - vector_db_connector - INFO - Retrieved 20 documents for query: what's up...
+2025-07-13 08:37:26,509 - vector_db_connector - INFO - Filtered 10 results to 4 above threshold 0.5
+2025-07-13 08:37:26,509 - vector_db_connector - INFO - Re-ranked 4 results
+2025-07-13 08:37:26,509 - rag_system - INFO - Retrieved 4 relevant documents
+2025-07-13 08:37:26,509 - rag_system - INFO - Successfully processed query in 0.343s
+2025-07-13 08:38:26,734 - vector_db_connector - INFO - VectorDBConnector initialized
+2025-07-13 08:38:26,734 - response_generator - WARNING - OpenAI API key not configured. Using fallback response generation.
+2025-07-13 08:38:26,734 - dialog_manager - INFO - DialogManager initialized
+2025-07-13 08:38:26,734 - rag_system - INFO - RAG System initialized successfully
+2025-07-13 08:38:26,742 - dialog_manager - INFO - Created new session: 7d915561-2d39-45fe-a651-af3ef8af7b5a
+2025-07-13 08:40:34,823 - rag_system - INFO - Checking for simple response: 'hi'
+2025-07-13 08:40:34,823 - rag_system - INFO - Detected greeting: hi
+2025-07-13 08:40:55,351 - vector_db_connector - INFO - Retrieved 20 documents for query: hi...
+2025-07-13 08:41:07,262 - rag_system - INFO - Checking for simple response: 'hello'
+2025-07-13 08:41:07,278 - rag_system - INFO - Detected greeting: hello
+2025-07-13 08:41:17,464 - rag_system - INFO - Checking for simple response: 'who are you'
+2025-07-13 08:41:17,465 - rag_system - INFO - Detected greeting: who are you
+2025-07-13 08:41:37,061 - rag_system - INFO - Checking for simple response: 'thanks'
+2025-07-13 08:41:37,087 - rag_system - INFO - Detected thanks: thanks
+2025-07-13 08:44:25,200 - rag_system - INFO - Checking for simple response: 'what is the property lowin sri lanka'
+2025-07-13 08:44:25,201 - rag_system - INFO - Detected thanks: what is the property lowin sri lanka
+2025-07-13 08:44:52,602 - dialog_manager - INFO - Created new session: 628f84fd-3a93-4e06-9acd-832cb2f3b2da
+2025-07-13 08:44:57,117 - rag_system - INFO - Checking for simple response: 'what is the property lowin sri lanka'
+2025-07-13 08:44:57,117 - rag_system - INFO - Detected thanks: what is the property lowin sri lanka
+2025-07-13 08:45:10,001 - rag_system - INFO - Checking for simple response: 'what is the property low in sri lanka'
+2025-07-13 08:45:10,001 - rag_system - INFO - Detected thanks: what is the property low in sri lanka
+2025-07-13 08:52:30,448 - vector_db_connector - INFO - VectorDBConnector initialized
+2025-07-13 08:52:30,448 - response_generator - WARNING - OpenAI API key not configured. Using fallback response generation.
+2025-07-13 08:52:30,448 - dialog_manager - INFO - DialogManager initialized
+2025-07-13 08:52:30,448 - rag_system - INFO - RAG System initialized successfully
+2025-07-13 08:52:30,448 - dialog_manager - INFO - Created new session: 394e84da-098e-471b-86e8-48acb7159ce3
+2025-07-13 08:52:52,870 - rag_system - INFO - Checking for simple response: 'what is the property low in srilanka'
+2025-07-13 08:52:52,872 - rag_system - INFO - Contains legal keywords, not a simple response: what is the property low in srilanka
+2025-07-13 08:52:53,200 - vector_db_connector - INFO - Retrieved 20 documents for query: what is the property low in srilanka...
+2025-07-13 08:52:53,203 - vector_db_connector - INFO - Filtered 10 results to 8 above threshold 0.5
+2025-07-13 08:52:53,203 - vector_db_connector - INFO - Re-ranked 8 results
+2025-07-13 08:52:53,204 - rag_system - INFO - Retrieved 5 relevant documents
+2025-07-13 08:52:53,206 - rag_system - INFO - Successfully processed query in 0.336s
+2025-07-13 08:53:17,261 - rag_system - INFO - Checking for simple response: 'whats up'
+2025-07-13 08:53:17,272 - rag_system - INFO - Detected greeting: whats up
+2025-07-13 08:56:31,577 - vector_db_connector - INFO - VectorDBConnector initialized
+2025-07-13 08:56:31,577 - response_generator - WARNING - OpenAI API key not configured. Using fallback response generation.
+2025-07-13 08:56:31,578 - dialog_manager - INFO - DialogManager initialized
+2025-07-13 08:56:31,578 - rag_system - INFO - RAG System initialized successfully
+2025-07-13 08:56:31,579 - dialog_manager - INFO - Created new session: 542f1f4b-e628-4071-8498-b840fa0d402b
+2025-07-13 08:56:39,385 - rag_system - INFO - Checking for simple response: 'hi'
+2025-07-13 08:56:39,422 - rag_system - INFO - Detected greeting: hi
+2025-07-13 08:57:02,843 - rag_system - INFO - Checking for simple response: 'hi'
+2025-07-13 08:57:02,843 - rag_system - INFO - Detected greeting: hi
