@@ -94,3 +94,20 @@
 2025-07-13 08:18:30,139 - vector_db_connector - INFO - Re-ranked 3 results
 2025-07-13 08:18:30,139 - rag_system - INFO - Retrieved 3 relevant documents
 2025-07-13 08:18:30,139 - rag_system - INFO - Successfully processed query in 0.389s
+2025-07-13 08:22:27,009 - vector_db_connector - INFO - Retrieved 20 documents for query: who is the Priminister of sri lanka...
+2025-07-13 08:22:27,009 - vector_db_connector - INFO - Filtered 10 results to 4 above threshold 0.5
+2025-07-13 08:22:27,009 - vector_db_connector - INFO - Re-ranked 4 results
+2025-07-13 08:22:27,009 - rag_system - INFO - Retrieved 4 relevant documents
+2025-07-13 08:22:27,011 - rag_system - INFO - Successfully processed query in 0.375s
+2025-07-13 08:23:06,489 - vector_db_connector - INFO - Retrieved 20 documents for query: what the fuck...
+2025-07-13 08:23:06,489 - vector_db_connector - INFO - Filtered 10 results to 3 above threshold 0.5
+2025-07-13 08:23:06,489 - vector_db_connector - INFO - Re-ranked 3 results
+2025-07-13 08:23:06,489 - rag_system - INFO - Retrieved 3 relevant documents
+2025-07-13 08:23:06,489 - rag_system - INFO - Successfully processed query in 0.345s
+2025-07-13 08:23:42,625 - vector_db_connector - INFO - Retrieved 20 documents for query: what the fuck...
+2025-07-13 08:23:42,626 - vector_db_connector - INFO - Filtered 10 results to 3 above threshold 0.5
+2025-07-13 08:23:42,628 - vector_db_connector - INFO - Re-ranked 3 results
+2025-07-13 08:23:42,628 - rag_system - INFO - Retrieved 3 relevant documents
+2025-07-13 08:23:42,628 - rag_system - INFO - Successfully processed query in 0.313s
+2025-07-13 08:24:15,708 - dialog_manager - INFO - Created new session: c379565a-792b-4231-80e7-61601f71c749
+2025-07-13 08:25:06,345 - dialog_manager - INFO - Created new session: 017aaba5-9d77-4667-9993-d88d9b775120
