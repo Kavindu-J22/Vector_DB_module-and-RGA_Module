@@ -1,0 +1,27 @@
+# RAG Module Requirements
+# Core dependencies for the RAG Response Generation and Dialog Management module
+
+# Vector Database
+pinecone-client>=4.0.0
+
+# Web Framework and UI
+streamlit>=1.28.0
+fastapi>=0.104.0
+uvicorn>=0.24.0
+
+# Data Visualization
+plotly>=5.17.0
+
+# HTTP and API
+requests>=2.31.0
+pydantic>=2.4.0
+
+# Utilities
+python-dotenv>=1.0.0
+
+# Optional: OpenAI (if API key is available)
+# openai>=1.0.0
+
+# Development and Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0

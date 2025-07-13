@@ -1,0 +1,21 @@
+2025-07-13 07:41:13,973 - vector_db_connector - INFO - VectorDBConnector initialized
+2025-07-13 07:41:13,974 - response_generator - WARNING - OpenAI API key not configured. Using fallback response generation.
+2025-07-13 07:41:13,974 - dialog_manager - INFO - DialogManager initialized
+2025-07-13 07:41:13,975 - __main__ - INFO - RAG System initialized successfully
+2025-07-13 07:41:15,768 - dialog_manager - INFO - Created new session: 93fca929-6c16-4b5b-bb44-ce75b70e305b
+2025-07-13 07:41:16,121 - vector_db_connector - INFO - Retrieved 20 documents for query: What are the property ownership rights in Sri Lank...
+2025-07-13 07:41:16,123 - vector_db_connector - INFO - Filtered 10 results to 3 above threshold 0.5
+2025-07-13 07:41:16,125 - vector_db_connector - INFO - Re-ranked 3 results
+2025-07-13 07:41:16,125 - __main__ - INFO - Retrieved 3 relevant documents
+2025-07-13 07:41:16,126 - __main__ - INFO - Successfully processed query in 0.358s
+2025-07-13 07:41:46,107 - vector_db_connector - INFO - VectorDBConnector initialized
+2025-07-13 07:41:46,157 - response_generator - WARNING - OpenAI API key not configured. Using fallback response generation.
+2025-07-13 07:41:46,162 - dialog_manager - INFO - DialogManager initialized
+2025-07-13 07:41:46,167 - rag_system - INFO - RAG System initialized successfully
+2025-07-13 07:41:51,276 - dialog_manager - INFO - Created new session: 0b2c2a29-7dbf-47e0-ad79-e0f1c44bb653
+2025-07-13 07:41:51,633 - vector_db_connector - INFO - Retrieved 20 documents for query: What are property ownership rights in Sri Lanka?\n...
+2025-07-13 07:41:51,634 - vector_db_connector - INFO - Filtered 10 results to 4 above threshold 0.5
+2025-07-13 07:41:51,635 - vector_db_connector - INFO - Re-ranked 4 results
+2025-07-13 07:41:51,635 - rag_system - INFO - Retrieved 4 relevant documents
+2025-07-13 07:41:51,636 - rag_system - INFO - Successfully processed query in 0.359s
+2025-07-13 07:42:24,181 - rag_system - ERROR - Error processing query: '<' not supported between instances of 'NoneType' and 'int'
