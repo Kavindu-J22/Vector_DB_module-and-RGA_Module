@@ -298,3 +298,29 @@ Assistant: Hello! I'm your Sri L...
 2025-07-13 09:21:49,912 - vector_db_connector - INFO - Re-ranked 7 results
 2025-07-13 09:21:49,912 - rag_system - INFO - Retrieved 5 relevant documents
 2025-07-13 09:21:49,912 - rag_system - INFO - Successfully processed query in 0.342s
+2025-07-13 09:23:26,419 - vector_db_connector - INFO - VectorDBConnector initialized
+2025-07-13 09:23:26,420 - response_generator - WARNING - OpenAI API key not configured. Using fallback response generation.
+2025-07-13 09:23:26,420 - dialog_manager - INFO - DialogManager initialized
+2025-07-13 09:23:26,421 - rag_system - INFO - RAG System initialized successfully
+2025-07-13 09:23:26,421 - dialog_manager - INFO - Created new session: f5d2c3ef-e631-4fcb-81b2-bd45cc69f5ef
+2025-07-13 09:23:57,644 - dialog_manager - INFO - Created new session: 68d2be6b-902f-4348-a4f1-0f90254bcae3
+2025-07-13 09:24:10,527 - dialog_manager - INFO - Created new session: a7671b29-ffbb-4bf0-8c2a-97eecfeaa379
+2025-07-13 09:24:16,322 - rag_system - INFO - Checking for simple response: 'child custody laws in sri lanka'
+2025-07-13 09:24:16,323 - rag_system - INFO - Contains legal keywords, not a simple response: child custody laws in sri lanka
+2025-07-13 09:24:16,647 - vector_db_connector - INFO - Retrieved 10 documents for query: Child custody laws in Sri Lanka...
+2025-07-13 09:24:16,648 - vector_db_connector - INFO - Filtered 10 results to 10 above threshold 0.5
+2025-07-13 09:24:16,649 - vector_db_connector - INFO - Re-ranked 10 results
+2025-07-13 09:24:16,650 - rag_system - INFO - Retrieved 5 relevant documents
+2025-07-13 09:24:16,651 - rag_system - INFO - Successfully processed query in 0.329s
+2025-07-13 09:52:36,029 - vector_db_connector - INFO - VectorDBConnector initialized
+2025-07-13 09:52:36,029 - response_generator - WARNING - OpenAI API key not configured. Using fallback response generation.
+2025-07-13 09:52:36,029 - dialog_manager - INFO - DialogManager initialized
+2025-07-13 09:52:36,029 - __main__ - INFO - RAG System initialized successfully
+2025-07-13 09:52:38,283 - dialog_manager - INFO - Created new session: a286de4b-4b5c-4176-ae44-69ba3dc5a57d
+2025-07-13 09:52:38,284 - __main__ - INFO - Checking for simple response: 'what are the property ownership rights in sri lanka?'
+2025-07-13 09:52:38,285 - __main__ - INFO - Contains legal keywords, not a simple response: what are the property ownership rights in sri lanka?
+2025-07-13 09:52:38,636 - vector_db_connector - INFO - Retrieved 10 documents for query: What are the property ownership rights in Sri Lank...
+2025-07-13 09:52:38,637 - vector_db_connector - INFO - Filtered 10 results to 7 above threshold 0.5
+2025-07-13 09:52:38,638 - vector_db_connector - INFO - Re-ranked 7 results
+2025-07-13 09:52:38,639 - __main__ - INFO - Retrieved 5 relevant documents
+2025-07-13 09:52:38,641 - __main__ - INFO - Successfully processed query in 0.358s
