@@ -290,12 +290,18 @@ def render_chat_interface():
     st.subheader("💬 Ask Your Legal Question")
     
     # Query input
+    default_value = st.session_state.get('selected_example', '')
     user_query = st.text_area(
         "Enter your legal question:",
+        value=default_value,
         placeholder=rag_config.CHAT_PLACEHOLDER,
         height=100,
         key="user_input"
     )
+
+    # Clear the selected example after using it
+    if 'selected_example' in st.session_state:
+        del st.session_state.selected_example
     
     # Advanced options
     with st.expander("🔧 Advanced Search Options"):
@@ -336,8 +342,10 @@ def render_chat_interface():
             "Commercial contract dispute resolution process",
             "Child custody laws in Sri Lanka"
         ]
-        st.session_state.user_input = st.selectbox("Choose an example:", examples)
-        st.rerun()
+        selected_example = st.selectbox("Choose an example:", examples, key="example_selector")
+        if st.button("Use This Example", key="use_example"):
+            st.session_state.selected_example = selected_example
+            st.rerun()
     
     # Handle search only button
     if search_button and user_query:
@@ -403,8 +411,7 @@ def render_chat_interface():
             else:
                 st.error(f"❌ Error: {result.get('error', 'Unknown error')}")
         
-        # Clear input
-        st.session_state.user_input = ""
+        # Input will be cleared on next rerun
         st.rerun()
 
 def render_responses():

@@ -19,3 +19,78 @@
 2025-07-13 07:41:51,635 - rag_system - INFO - Retrieved 4 relevant documents
 2025-07-13 07:41:51,636 - rag_system - INFO - Successfully processed query in 0.359s
 2025-07-13 07:42:24,181 - rag_system - ERROR - Error processing query: '<' not supported between instances of 'NoneType' and 'int'
+2025-07-13 07:54:56,709 - vector_db_connector - INFO - VectorDBConnector initialized
+2025-07-13 07:54:56,710 - response_generator - WARNING - OpenAI API key not configured. Using fallback response generation.
+2025-07-13 07:54:56,710 - dialog_manager - INFO - DialogManager initialized
+2025-07-13 07:54:56,711 - rag_system - INFO - RAG System initialized successfully
+2025-07-13 07:54:56,713 - dialog_manager - INFO - Created new session: efa840c9-6c6e-447c-8cda-9d9fc94c2060
+2025-07-13 07:56:05,621 - vector_db_connector - INFO - Retrieved 20 documents for query: What are the property ownership rights in Sri Lank...
+2025-07-13 07:56:05,621 - vector_db_connector - INFO - Filtered 10 results to 3 above threshold 0.5
+2025-07-13 07:56:05,621 - vector_db_connector - INFO - Re-ranked 3 results
+2025-07-13 07:56:05,621 - rag_system - INFO - Retrieved 3 relevant documents
+2025-07-13 07:56:05,621 - rag_system - INFO - Successfully processed query in 0.348s
+2025-07-13 07:57:19,469 - dialog_manager - INFO - Created new session: f8717703-039d-44f8-b6de-f2af981840af
+2025-07-13 07:58:26,958 - vector_db_connector - INFO - VectorDBConnector initialized
+2025-07-13 07:58:26,958 - response_generator - WARNING - OpenAI API key not configured. Using fallback response generation.
+2025-07-13 07:58:26,958 - dialog_manager - INFO - DialogManager initialized
+2025-07-13 07:58:26,958 - rag_system - INFO - RAG System initialized successfully
+2025-07-13 07:58:26,958 - dialog_manager - INFO - Created new session: 68165a6f-6122-4dd6-a375-91fe510c3b38
+2025-07-13 07:58:40,204 - vector_db_connector - INFO - Retrieved 20 documents for query: hi...
+2025-07-13 07:58:40,206 - vector_db_connector - INFO - Filtered 10 results to 4 above threshold 0.5
+2025-07-13 07:58:40,206 - vector_db_connector - INFO - Re-ranked 4 results
+2025-07-13 07:58:40,207 - rag_system - INFO - Retrieved 4 relevant documents
+2025-07-13 07:58:40,208 - rag_system - INFO - Successfully processed query in 0.367s
+2025-07-13 08:00:49,907 - rag_system - ERROR - Error processing query: '<' not supported between instances of 'NoneType' and 'int'
+2025-07-13 08:04:25,427 - rag_system - ERROR - Error processing query: '<' not supported between instances of 'NoneType' and 'int'
+2025-07-13 08:05:20,302 - rag_system - ERROR - Error processing query: '<' not supported between instances of 'NoneType' and 'int'
+2025-07-13 08:05:22,290 - rag_system - ERROR - Error processing query: '<' not supported between instances of 'NoneType' and 'int'
+2025-07-13 08:06:26,997 - dialog_manager - INFO - Created new session: 1d32391a-37ec-4350-8c00-4181ca71c129
+2025-07-13 08:07:07,630 - dialog_manager - INFO - Created new session: 1cfba7dc-c168-4f12-998c-4385f29e49d7
+2025-07-13 08:08:02,095 - vector_db_connector - INFO - Retrieved 20 documents for query: hello...
+2025-07-13 08:08:02,111 - vector_db_connector - INFO - Filtered 10 results to 5 above threshold 0.5
+2025-07-13 08:08:02,111 - vector_db_connector - INFO - Re-ranked 5 results
+2025-07-13 08:08:02,111 - rag_system - INFO - Retrieved 5 relevant documents
+2025-07-13 08:08:02,111 - rag_system - INFO - Successfully processed query in 0.398s
+2025-07-13 08:09:38,158 - rag_system - ERROR - Error processing query: '<' not supported between instances of 'NoneType' and 'int'
+2025-07-13 08:10:40,108 - rag_system - ERROR - Error processing query: '<' not supported between instances of 'NoneType' and 'int'
+2025-07-13 08:10:53,810 - vector_db_connector - INFO - Retrieved 20 documents for query: What are the property ownership rights in Sri Lank...
+2025-07-13 08:11:47,554 - rag_system - ERROR - Error processing query: '<' not supported between instances of 'NoneType' and 'int'
+2025-07-13 08:12:21,359 - dialog_manager - INFO - Created new session: 88d48225-7d4a-410a-9564-a0a45695d310
+2025-07-13 08:12:37,917 - vector_db_connector - INFO - Retrieved 20 documents for query: what is your Business ?...
+2025-07-13 08:12:37,921 - vector_db_connector - INFO - Filtered 10 results to 9 above threshold 0.5
+2025-07-13 08:12:37,921 - vector_db_connector - INFO - Re-ranked 9 results
+2025-07-13 08:12:37,921 - rag_system - INFO - Retrieved 5 relevant documents
+2025-07-13 08:12:37,921 - rag_system - INFO - Successfully processed query in 0.340s
+2025-07-13 08:13:02,311 - rag_system - ERROR - Error processing query: '<' not supported between instances of 'NoneType' and 'int'
+2025-07-13 08:15:38,033 - vector_db_connector - INFO - VectorDBConnector initialized
+2025-07-13 08:15:38,033 - response_generator - WARNING - OpenAI API key not configured. Using fallback response generation.
+2025-07-13 08:15:38,033 - dialog_manager - INFO - DialogManager initialized
+2025-07-13 08:15:38,033 - rag_system - INFO - RAG System initialized successfully
+2025-07-13 08:15:38,033 - dialog_manager - INFO - Created new session: b28c1147-897c-47d3-acf3-d027346f9d0d
+2025-07-13 08:15:58,803 - vector_db_connector - INFO - Retrieved 20 documents for query: hello...
+2025-07-13 08:15:58,805 - vector_db_connector - INFO - Filtered 10 results to 5 above threshold 0.5
+2025-07-13 08:15:58,806 - vector_db_connector - INFO - Re-ranked 5 results
+2025-07-13 08:15:58,807 - rag_system - INFO - Retrieved 5 relevant documents
+2025-07-13 08:15:58,808 - rag_system - INFO - Successfully processed query in 0.410s
+2025-07-13 08:16:40,854 - rag_system - ERROR - Error processing query: '<' not supported between instances of 'NoneType' and 'int'
+2025-07-13 08:16:47,049 - rag_system - ERROR - Error processing query: '<' not supported between instances of 'NoneType' and 'int'
+2025-07-13 08:17:51,785 - vector_db_connector - INFO - VectorDBConnector initialized
+2025-07-13 08:17:51,786 - response_generator - WARNING - OpenAI API key not configured. Using fallback response generation.
+2025-07-13 08:17:51,786 - dialog_manager - INFO - DialogManager initialized
+2025-07-13 08:17:51,787 - rag_system - INFO - RAG System initialized successfully
+2025-07-13 08:17:51,787 - dialog_manager - INFO - Created new session: 7648439c-69db-4d3c-91a9-0c024467308e
+2025-07-13 08:18:06,285 - vector_db_connector - INFO - Retrieved 20 documents for query: hi...
+2025-07-13 08:18:06,286 - vector_db_connector - INFO - Filtered 10 results to 4 above threshold 0.5
+2025-07-13 08:18:06,288 - vector_db_connector - INFO - Re-ranked 4 results
+2025-07-13 08:18:06,288 - rag_system - INFO - Retrieved 4 relevant documents
+2025-07-13 08:18:06,288 - rag_system - INFO - Successfully processed query in 0.352s
+2025-07-13 08:18:19,632 - vector_db_connector - INFO - Retrieved 20 documents for query: how are you...
+2025-07-13 08:18:19,632 - vector_db_connector - INFO - Filtered 10 results to 5 above threshold 0.5
+2025-07-13 08:18:19,638 - vector_db_connector - INFO - Re-ranked 5 results
+2025-07-13 08:18:19,639 - rag_system - INFO - Retrieved 5 relevant documents
+2025-07-13 08:18:19,643 - rag_system - INFO - Successfully processed query in 0.373s
+2025-07-13 08:18:30,133 - vector_db_connector - INFO - Retrieved 20 documents for query: thanks...
+2025-07-13 08:18:30,133 - vector_db_connector - INFO - Filtered 10 results to 3 above threshold 0.5
+2025-07-13 08:18:30,139 - vector_db_connector - INFO - Re-ranked 3 results
+2025-07-13 08:18:30,139 - rag_system - INFO - Retrieved 3 relevant documents
+2025-07-13 08:18:30,139 - rag_system - INFO - Successfully processed query in 0.389s

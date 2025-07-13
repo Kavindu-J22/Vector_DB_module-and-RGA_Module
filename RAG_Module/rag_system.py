@@ -178,13 +178,16 @@ class RAGSystem:
                     score += 0.1
                 
                 # Source count bonus
-                num_sources = response['num_sources']
-                score += min(num_sources * 0.1, 0.3)
+                num_sources = response.get('num_sources', 0)
+                if num_sources is not None:
+                    score += min(num_sources * 0.1, 0.3)
                 
                 # Content length appropriateness
-                content_length = len(response['content'])
-                if 200 <= content_length <= 800:
-                    score += 0.1
+                content = response.get('content', '')
+                if content:
+                    content_length = len(content)
+                    if 200 <= content_length <= 800:
+                        score += 0.1
                 
                 response['ranking_score'] = score
             

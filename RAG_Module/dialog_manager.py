@@ -129,6 +129,8 @@ class DialogManager:
             
             # Include the selected response or the first one
             selected_idx = turn.get('selected_response', 0)
+            if selected_idx is None:
+                selected_idx = 0
             if turn['system_responses'] and selected_idx < len(turn['system_responses']):
                 response = turn['system_responses'][selected_idx]
                 context_parts.append(f"Assistant: {response['content'][:200]}...")
