@@ -177,3 +177,124 @@
 2025-07-13 08:56:39,422 - rag_system - INFO - Detected greeting: hi
 2025-07-13 08:57:02,843 - rag_system - INFO - Checking for simple response: 'hi'
 2025-07-13 08:57:02,843 - rag_system - INFO - Detected greeting: hi
+2025-07-13 08:58:05,906 - vector_db_connector - INFO - VectorDBConnector initialized
+2025-07-13 08:58:05,906 - response_generator - WARNING - OpenAI API key not configured. Using fallback response generation.
+2025-07-13 08:58:05,906 - dialog_manager - INFO - DialogManager initialized
+2025-07-13 08:58:05,906 - rag_system - INFO - RAG System initialized successfully
+2025-07-13 08:58:05,906 - dialog_manager - INFO - Created new session: 785960d3-ac52-41ad-9be4-18ab7e5bbe5f
+2025-07-13 08:59:12,208 - rag_system - INFO - Checking for simple response: 'hi'
+2025-07-13 08:59:12,208 - rag_system - INFO - Detected greeting: hi
+2025-07-13 09:00:08,790 - rag_system - INFO - Checking for simple response: 'what are the property ownership rights in sri lanka?'
+2025-07-13 09:00:08,790 - rag_system - INFO - Contains legal keywords, not a simple response: what are the property ownership rights in sri lanka?
+2025-07-13 09:00:09,118 - vector_db_connector - INFO - Retrieved 10 documents for query: What are the property ownership rights in Sri Lank...
+2025-07-13 09:00:09,118 - vector_db_connector - INFO - Filtered 10 results to 10 above threshold 0.5
+2025-07-13 09:00:09,118 - vector_db_connector - INFO - Re-ranked 10 results
+2025-07-13 09:00:09,118 - rag_system - INFO - Retrieved 5 relevant documents
+2025-07-13 09:00:09,118 - rag_system - INFO - Successfully processed query in 0.328s
+2025-07-13 09:00:19,260 - rag_system - INFO - Checking for simple response: 'what are the property ownership rights in sri lanka?'
+2025-07-13 09:00:19,260 - rag_system - INFO - Contains legal keywords, not a simple response: what are the property ownership rights in sri lanka?
+2025-07-13 09:00:19,638 - vector_db_connector - INFO - Retrieved 10 documents for query: What are the property ownership rights in Sri Lank...
+2025-07-13 09:00:19,638 - vector_db_connector - INFO - Filtered 10 results to 7 above threshold 0.5
+2025-07-13 09:00:19,638 - vector_db_connector - INFO - Re-ranked 7 results
+2025-07-13 09:00:19,638 - rag_system - INFO - Retrieved 5 relevant documents
+2025-07-13 09:00:19,641 - rag_system - INFO - Successfully processed query in 0.381s
+2025-07-13 09:03:10,129 - rag_system - INFO - Checking for simple response: 'what is the main thing'
+2025-07-13 09:03:10,129 - rag_system - INFO - No simple response pattern found for: what is the main thing
+2025-07-13 09:03:10,443 - vector_db_connector - INFO - Retrieved 20 documents for query: what is the main thing...
+2025-07-13 09:03:10,444 - vector_db_connector - INFO - Filtered 10 results to 8 above threshold 0.5
+2025-07-13 09:03:10,444 - vector_db_connector - INFO - Re-ranked 8 results
+2025-07-13 09:03:10,446 - rag_system - INFO - Retrieved 5 relevant documents
+2025-07-13 09:03:10,446 - rag_system - INFO - Successfully processed query in 0.317s
+2025-07-13 09:03:46,716 - rag_system - INFO - Checking for simple response: 'what is the main thing'
+2025-07-13 09:03:46,716 - rag_system - INFO - No simple response pattern found for: what is the main thing
+2025-07-13 09:03:47,058 - vector_db_connector - INFO - Retrieved 20 documents for query: what is the main thing...
+2025-07-13 09:03:47,058 - vector_db_connector - INFO - Filtered 10 results to 8 above threshold 0.5
+2025-07-13 09:03:47,058 - vector_db_connector - INFO - Re-ranked 8 results
+2025-07-13 09:03:47,058 - rag_system - INFO - Retrieved 5 relevant documents
+2025-07-13 09:03:47,066 - rag_system - INFO - Successfully processed query in 0.350s
+2025-07-13 09:04:06,689 - rag_system - INFO - Checking for simple response: 'what is the main thing'
+2025-07-13 09:04:06,689 - rag_system - INFO - No simple response pattern found for: what is the main thing
+2025-07-13 09:04:07,039 - vector_db_connector - INFO - Retrieved 20 documents for query: what is the main thing...
+2025-07-13 09:04:07,040 - vector_db_connector - INFO - Filtered 10 results to 8 above threshold 0.5
+2025-07-13 09:04:07,040 - vector_db_connector - INFO - Re-ranked 8 results
+2025-07-13 09:04:07,041 - rag_system - INFO - Retrieved 5 relevant documents
+2025-07-13 09:04:07,041 - rag_system - INFO - Successfully processed query in 0.352s
+2025-07-13 09:04:26,039 - rag_system - INFO - Checking for simple response: 'what is the main thing'
+2025-07-13 09:04:26,039 - rag_system - INFO - No simple response pattern found for: what is the main thing
+2025-07-13 09:04:26,364 - vector_db_connector - INFO - Retrieved 20 documents for query: what is the main thing...
+2025-07-13 09:04:26,366 - vector_db_connector - INFO - Filtered 10 results to 8 above threshold 0.5
+2025-07-13 09:04:26,366 - vector_db_connector - INFO - Re-ranked 8 results
+2025-07-13 09:04:26,366 - rag_system - INFO - Retrieved 5 relevant documents
+2025-07-13 09:04:26,367 - rag_system - INFO - Successfully processed query in 0.328s
+2025-07-13 09:04:36,923 - rag_system - INFO - Checking for simple response: 'what is the main thing'
+2025-07-13 09:04:36,924 - rag_system - INFO - No simple response pattern found for: what is the main thing
+2025-07-13 09:04:37,263 - vector_db_connector - INFO - Retrieved 20 documents for query: what is the main thing...
+2025-07-13 09:04:37,264 - vector_db_connector - INFO - Filtered 10 results to 8 above threshold 0.5
+2025-07-13 09:04:37,265 - vector_db_connector - INFO - Re-ranked 8 results
+2025-07-13 09:04:37,265 - rag_system - INFO - Retrieved 5 relevant documents
+2025-07-13 09:04:37,265 - rag_system - INFO - Successfully processed query in 0.342s
+2025-07-13 09:05:17,494 - dialog_manager - INFO - Created new session: 26108d23-04ad-49c9-a8c8-2150d536a095
+2025-07-13 09:05:46,885 - dialog_manager - INFO - Created new session: 145c80e6-87e0-49cd-8958-1f00a825d27f
+2025-07-13 09:09:30,681 - vector_db_connector - INFO - VectorDBConnector initialized
+2025-07-13 09:09:30,681 - response_generator - WARNING - OpenAI API key not configured. Using fallback response generation.
+2025-07-13 09:09:30,682 - dialog_manager - INFO - DialogManager initialized
+2025-07-13 09:09:30,682 - rag_system - INFO - RAG System initialized successfully
+2025-07-13 09:09:30,682 - dialog_manager - INFO - Created new session: ba94eaa8-dfe6-41fc-aba1-62bbb0be7b6c
+2025-07-13 09:10:21,324 - dialog_manager - INFO - Created new session: 8a2a72e1-eea2-4b26-bd24-ac614666aaf3
+2025-07-13 09:10:25,277 - rag_system - INFO - Checking for simple response: 'hi'
+2025-07-13 09:10:25,281 - rag_system - INFO - Detected greeting: hi
+2025-07-13 09:10:31,702 - rag_system - INFO - Checking for simple response: 'commercial contract dispute resolution process'
+2025-07-13 09:10:31,702 - rag_system - INFO - Contains legal keywords, not a simple response: commercial contract dispute resolution process
+2025-07-13 09:10:32,042 - vector_db_connector - INFO - Retrieved 10 documents for query: Commercial contract dispute resolution process...
+2025-07-13 09:10:32,042 - vector_db_connector - INFO - Filtered 10 results to 7 above threshold 0.5
+2025-07-13 09:10:32,042 - vector_db_connector - INFO - Re-ranked 7 results
+2025-07-13 09:10:32,042 - rag_system - INFO - Retrieved 5 relevant documents
+2025-07-13 09:10:32,042 - rag_system - INFO - Successfully processed query in 0.340s
+2025-07-13 09:11:44,456 - rag_system - INFO - Checking for simple response: 'hellooo'
+2025-07-13 09:11:44,458 - rag_system - INFO - No simple response pattern found for: hellooo
+2025-07-13 09:11:44,848 - vector_db_connector - INFO - Retrieved 20 documents for query: hellooo...
+2025-07-13 09:11:44,857 - vector_db_connector - INFO - Filtered 10 results to 5 above threshold 0.5
+2025-07-13 09:11:44,858 - vector_db_connector - INFO - Re-ranked 5 results
+2025-07-13 09:11:44,859 - rag_system - INFO - Retrieved 5 relevant documents
+2025-07-13 09:11:44,860 - rag_system - INFO - Successfully processed query in 0.404s
+2025-07-13 09:12:23,188 - rag_system - INFO - Checking for simple response: 'who is the priminister'
+2025-07-13 09:12:23,188 - rag_system - INFO - No simple response pattern found for: who is the priminister
+2025-07-13 09:12:23,530 - vector_db_connector - INFO - Retrieved 20 documents for query: who is the priminister...
+2025-07-13 09:12:23,530 - vector_db_connector - INFO - Filtered 10 results to 6 above threshold 0.5
+2025-07-13 09:12:23,537 - vector_db_connector - INFO - Re-ranked 6 results
+2025-07-13 09:12:23,537 - rag_system - INFO - Retrieved 5 relevant documents
+2025-07-13 09:12:23,537 - rag_system - INFO - Successfully processed query in 0.349s
+2025-07-13 09:13:03,069 - rag_system - INFO - Checking for simple response: 'as perfected beforeor within ten days after the debtor obtainedpossession of the collateral as the debtor,or a third party at the request of the debtorobtained or held possession of thecollateral, wh of pw-01 and 0 3 thate were arrsted in the manner the witnasses claimed and had stated that are are are aree completely fabricated charges against them. the dock statement of the 2nd accused -apuplant judge, he has considered this fact but has concluded that it has not a caused a reasonable doubt in the case of the prosecution. but it is the opinion of this court that it is highly unlikely that a'
+2025-07-13 09:13:03,070 - rag_system - INFO - Contains legal keywords, not a simple response: as perfected beforeor within ten days after the debtor obtainedpossession of the collateral as the debtor,or a third party at the request of the debtorobtained or held possession of thecollateral, wh of pw-01 and 0 3 thate were arrsted in the manner the witnasses claimed and had stated that are are are aree completely fabricated charges against them. the dock statement of the 2nd accused -apuplant judge, he has considered this fact but has concluded that it has not a caused a reasonable doubt in the case of the prosecution. but it is the opinion of this court that it is highly unlikely that a
+2025-07-13 09:13:03,396 - vector_db_connector - INFO - Retrieved 20 documents for query: Context: User: hi
+Assistant: Hello! I'm your Sri L...
+2025-07-13 09:13:03,396 - vector_db_connector - INFO - Filtered 10 results to 10 above threshold 0.5
+2025-07-13 09:13:03,398 - vector_db_connector - INFO - Re-ranked 10 results
+2025-07-13 09:13:03,398 - rag_system - INFO - Retrieved 5 relevant documents
+2025-07-13 09:13:03,399 - rag_system - INFO - Successfully processed query in 0.329s
+2025-07-13 09:14:11,195 - rag_system - INFO - Checking for simple response: 'what is the penalty for breach of contract under sri lankan law?'
+2025-07-13 09:14:11,195 - rag_system - INFO - Contains legal keywords, not a simple response: what is the penalty for breach of contract under sri lankan law?
+2025-07-13 09:14:11,534 - vector_db_connector - INFO - Retrieved 10 documents for query: What is the penalty for breach of contract under S...
+2025-07-13 09:14:11,535 - vector_db_connector - INFO - Filtered 10 results to 10 above threshold 0.5
+2025-07-13 09:14:11,536 - vector_db_connector - INFO - Re-ranked 10 results
+2025-07-13 09:14:11,536 - rag_system - INFO - Retrieved 5 relevant documents
+2025-07-13 09:14:11,538 - rag_system - INFO - Successfully processed query in 0.341s
+2025-07-13 09:18:38,906 - vector_db_connector - INFO - VectorDBConnector initialized
+2025-07-13 09:18:38,907 - response_generator - WARNING - OpenAI API key not configured. Using fallback response generation.
+2025-07-13 09:18:38,907 - dialog_manager - INFO - DialogManager initialized
+2025-07-13 09:18:38,907 - rag_system - INFO - RAG System initialized successfully
+2025-07-13 09:18:38,908 - dialog_manager - INFO - Created new session: 3ea11015-6289-4ab7-889c-816da14b4d9c
+2025-07-13 09:20:19,374 - vector_db_connector - INFO - VectorDBConnector initialized
+2025-07-13 09:20:19,374 - response_generator - WARNING - OpenAI API key not configured. Using fallback response generation.
+2025-07-13 09:20:19,374 - dialog_manager - INFO - DialogManager initialized
+2025-07-13 09:20:19,374 - rag_system - INFO - RAG System initialized successfully
+2025-07-13 09:20:19,374 - dialog_manager - INFO - Created new session: 88bf7afe-7ab8-474c-8097-b552029bb5df
+2025-07-13 09:21:09,217 - rag_system - INFO - Checking for simple response: 'hi'
+2025-07-13 09:21:09,217 - rag_system - INFO - Detected greeting: hi
+2025-07-13 09:21:49,571 - rag_system - INFO - Checking for simple response: 'what are the property ownership rights in sri lanka?'
+2025-07-13 09:21:49,573 - rag_system - INFO - Contains legal keywords, not a simple response: what are the property ownership rights in sri lanka?
+2025-07-13 09:21:49,902 - vector_db_connector - INFO - Retrieved 10 documents for query: What are the property ownership rights in Sri Lank...
+2025-07-13 09:21:49,912 - vector_db_connector - INFO - Filtered 10 results to 7 above threshold 0.5
+2025-07-13 09:21:49,912 - vector_db_connector - INFO - Re-ranked 7 results
+2025-07-13 09:21:49,912 - rag_system - INFO - Retrieved 5 relevant documents
+2025-07-13 09:21:49,912 - rag_system - INFO - Successfully processed query in 0.342s

@@ -300,15 +300,18 @@ def render_chat_interface():
         # Use the selected example and clear it
         default_value = st.session_state.selected_example
         del st.session_state.selected_example
+        # Use a unique key to force refresh
+        text_key = f"user_input_{hash(default_value)}"
     else:
         default_value = ""
+        text_key = "user_input"
 
     user_query = st.text_area(
         "Enter your legal question:",
         value=default_value,
         placeholder=rag_config.CHAT_PLACEHOLDER,
         height=100,
-        key="user_input"
+        key=text_key
     )
     
     # Advanced options
@@ -357,17 +360,28 @@ def render_chat_interface():
             "Child custody laws in Sri Lanka"
         ]
 
-        col_ex1, col_ex2 = st.columns([3, 1])
-        with col_ex1:
-            selected_example = st.selectbox("Choose an example:", examples, key="example_selector")
-        with col_ex2:
-            if st.button("Use This Example", key="use_example"):
-                st.session_state.selected_example = selected_example
-                st.session_state.show_examples = False
-                st.rerun()
-            if st.button("Cancel", key="cancel_example"):
-                st.session_state.show_examples = False
-                st.rerun()
+        # Create buttons for each example
+        st.write("Click on any example to use it:")
+
+        col1, col2 = st.columns(2)
+
+        with col1:
+            for i, example in enumerate(examples[:3]):
+                if st.button(f"📋 {example[:50]}...", key=f"example_{i}", help=example):
+                    st.session_state.selected_example = example
+                    st.session_state.show_examples = False
+                    st.rerun()
+
+        with col2:
+            for i, example in enumerate(examples[3:], 3):
+                if st.button(f"📋 {example[:50]}...", key=f"example_{i}", help=example):
+                    st.session_state.selected_example = example
+                    st.session_state.show_examples = False
+                    st.rerun()
+
+        if st.button("❌ Cancel", key="cancel_example"):
+            st.session_state.show_examples = False
+            st.rerun()
     
     # Handle search only button
     if search_button and user_query:
