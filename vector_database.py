@@ -3,7 +3,7 @@ Vector Database Integration Module
 Handles Pinecone vector database operations for legal document storage and retrieval
 """
 
-import pinecone
+from pinecone import Pinecone, ServerlessSpec
 import numpy as np
 import logging
 from typing import List, Dict, Any, Optional, Tuple
@@ -15,42 +15,47 @@ logger = logging.getLogger(__name__)
 
 class VectorDatabase:
     """Pinecone vector database interface for legal documents"""
-    
-    def __init__(self, api_key: str = config.PINECONE_API_KEY, 
+
+    def __init__(self, api_key: str = config.PINECONE_API_KEY,
                  environment: str = config.PINECONE_ENVIRONMENT,
                  index_name: str = config.PINECONE_INDEX_NAME):
-        
+
         self.api_key = api_key
         self.environment = environment
         self.index_name = index_name
+        self.pc = None
         self.index = None
-        
+
         self._initialize_pinecone()
         logger.info(f"VectorDatabase initialized with index: {index_name}")
-    
+
     def _initialize_pinecone(self):
         """Initialize Pinecone connection"""
         try:
-            # Initialize Pinecone
-            pinecone.init(api_key=self.api_key, environment=self.environment)
-            
+            # Initialize Pinecone client
+            self.pc = Pinecone(api_key=self.api_key)
+
             # Check if index exists, create if not
-            if self.index_name not in pinecone.list_indexes():
+            existing_indexes = self.pc.list_indexes().names()
+            if self.index_name not in existing_indexes:
                 logger.info(f"Creating new index: {self.index_name}")
-                pinecone.create_index(
+                self.pc.create_index(
                     name=self.index_name,
                     dimension=config.VECTOR_DIMENSION,
                     metric=config.METRIC,
-                    pods=config.PODS,
-                    replicas=config.REPLICAS
+                    spec=ServerlessSpec(
+                        cloud='aws',
+                        region='us-east-1'
+                    )
                 )
                 # Wait for index to be ready
-                time.sleep(10)
-            
+                logger.info("Waiting for index to be ready...")
+                time.sleep(30)
+
             # Connect to index
-            self.index = pinecone.Index(self.index_name)
+            self.index = self.pc.Index(self.index_name)
             logger.info(f"Connected to Pinecone index: {self.index_name}")
-            
+
         except Exception as e:
             logger.error(f"Error initializing Pinecone: {str(e)}")
             raise
