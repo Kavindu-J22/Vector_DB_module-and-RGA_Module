@@ -324,3 +324,37 @@ Assistant: Hello! I'm your Sri L...
 2025-07-13 09:52:38,638 - vector_db_connector - INFO - Re-ranked 7 results
 2025-07-13 09:52:38,639 - __main__ - INFO - Retrieved 5 relevant documents
 2025-07-13 09:52:38,641 - __main__ - INFO - Successfully processed query in 0.358s
+2025-07-13 10:06:01,052 - vector_db_connector - INFO - VectorDBConnector initialized
+2025-07-13 10:06:01,053 - response_generator - WARNING - OpenAI API key not configured. Using fallback response generation.
+2025-07-13 10:06:01,054 - dialog_manager - INFO - DialogManager initialized
+2025-07-13 10:06:01,054 - rag_system - INFO - RAG System initialized successfully
+2025-07-13 10:06:01,055 - dialog_manager - INFO - Created new session: d3aaac87-32b9-42f6-8069-de30e9053a83
+2025-07-13 10:37:58,764 - vector_db_connector - INFO - VectorDBConnector initialized
+2025-07-13 10:37:58,764 - response_generator - WARNING - OpenAI API key not configured. Using fallback response generation.
+2025-07-13 10:37:58,765 - dialog_manager - INFO - DialogManager initialized
+2025-07-13 10:37:58,765 - rag_system - INFO - RAG System initialized successfully
+2025-07-13 10:37:58,765 - dialog_manager - INFO - Created new session: 525b3b78-1015-4749-bc5c-05c135edfa9d
+2025-07-13 10:38:20,322 - rag_system - INFO - Checking for simple response: 'hi'
+2025-07-13 10:38:20,323 - rag_system - INFO - Detected greeting: hi
+2025-07-13 10:38:47,041 - rag_system - INFO - Checking for simple response: 'what are the property ownership rights in sri lanka?'
+2025-07-13 10:38:47,042 - rag_system - INFO - Contains legal keywords, not a simple response: what are the property ownership rights in sri lanka?
+2025-07-13 10:38:47,377 - vector_db_connector - INFO - Retrieved 10 documents for query: What are the property ownership rights in Sri Lank...
+2025-07-13 10:38:47,377 - vector_db_connector - INFO - Filtered 10 results to 7 above threshold 0.5
+2025-07-13 10:38:47,378 - vector_db_connector - INFO - Re-ranked 7 results
+2025-07-13 10:38:47,378 - rag_system - INFO - Retrieved 5 relevant documents
+2025-07-13 10:38:47,379 - rag_system - INFO - Successfully processed query in 0.338s
+2025-07-13 10:39:15,291 - rag_system - INFO - Checking for simple response: 'under sri lankan law, what are the essential elements required for the formation of a valid contract, and how does the contract ordinance no. 15 of 1866 regulate the enforcement and breach of contractual agreements, including available remedies such as damages, specific performance, and injunctions?'
+2025-07-13 10:39:15,292 - rag_system - INFO - Contains legal keywords, not a simple response: under sri lankan law, what are the essential elements required for the formation of a valid contract, and how does the contract ordinance no. 15 of 1866 regulate the enforcement and breach of contractual agreements, including available remedies such as damages, specific performance, and injunctions?
+2025-07-13 10:39:15,648 - vector_db_connector - INFO - Retrieved 10 documents for query: Under Sri Lankan law, what are the essential eleme...
+2025-07-13 10:39:15,650 - vector_db_connector - INFO - Filtered 10 results to 6 above threshold 0.5
+2025-07-13 10:39:15,651 - vector_db_connector - INFO - Re-ranked 6 results
+2025-07-13 10:39:15,651 - rag_system - INFO - Retrieved 5 relevant documents
+2025-07-13 10:39:15,652 - rag_system - INFO - Successfully processed query in 0.361s
+2025-07-13 10:39:26,543 - vector_db_connector - INFO - Retrieved 20 documents for query: Under Sri Lankan law, what are the essential eleme...
+2025-07-13 10:39:39,207 - rag_system - INFO - Checking for simple response: 'under sri lankan law, what are the essential elements required for the formation of a valid contract, and how does the contract ordinance no. 15 of 1866 regulate the enforcement and breach of contractual agreements, including available remedies such as damages, specific performance, and injunctions?'
+2025-07-13 10:39:39,207 - rag_system - INFO - Contains legal keywords, not a simple response: under sri lankan law, what are the essential elements required for the formation of a valid contract, and how does the contract ordinance no. 15 of 1866 regulate the enforcement and breach of contractual agreements, including available remedies such as damages, specific performance, and injunctions?
+2025-07-13 10:39:39,801 - vector_db_connector - INFO - Retrieved 10 documents for query: Under Sri Lankan law, what are the essential eleme...
+2025-07-13 10:39:39,802 - vector_db_connector - INFO - Filtered 10 results to 6 above threshold 0.5
+2025-07-13 10:39:39,803 - vector_db_connector - INFO - Re-ranked 6 results
+2025-07-13 10:39:39,803 - rag_system - INFO - Retrieved 5 relevant documents
+2025-07-13 10:39:39,804 - rag_system - INFO - Successfully processed query in 0.598s
