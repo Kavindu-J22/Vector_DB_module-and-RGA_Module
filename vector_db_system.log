@@ -11,3 +11,14 @@
 2025-07-13 07:08:38,985 - __main__ - INFO - Found 5 results
 2025-07-13 07:09:14,650 - __main__ - INFO - Searching for: 'property ownership and transfer'
 2025-07-13 07:09:14,967 - __main__ - INFO - Found 5 results
+2025-07-18 02:17:46,729 - __main__ - INFO - VectorDBEmbeddingSystem initialized
+2025-07-18 02:17:51,724 - __main__ - INFO - Searching for: 'property ownership rights'
+2025-07-18 02:17:52,915 - __main__ - INFO - Found 5 results
+2025-07-18 02:17:52,915 - __main__ - INFO - Searching for: 'marriage and divorce laws'
+2025-07-18 02:17:53,495 - __main__ - INFO - Found 5 results
+2025-07-18 02:17:53,495 - __main__ - INFO - Searching for: 'commercial contract disputes'
+2025-07-18 02:17:53,821 - __main__ - INFO - Found 5 results
+2025-07-18 02:17:53,822 - __main__ - INFO - Searching for: 'employment termination'
+2025-07-18 02:17:54,175 - __main__ - INFO - Found 5 results
+2025-07-18 02:17:54,176 - __main__ - INFO - Searching for: 'intellectual property'
+2025-07-18 02:17:54,493 - __main__ - INFO - Found 5 results
